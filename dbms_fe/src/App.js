@@ -1,14 +1,17 @@
 import {BrowserRouter, Route} from 'react-router-dom'; 
-import LoginScreen from './screens/login_screen';
-import RegisterScreen from './screens/register_screen';
+import LoginScreen from './screens/LoginScreen';
+import RegisterScreen from './screens/RegisterScreen';
+import HomeScreen from './screens/HomeScreen'
+
 function App() {
   return (
 	<BrowserRouter>
 	{/* header */}
 	<header></header>
 		<main>
-		<Route path="/" component={LoginScreen} exact></Route>
 		<Route path="/register" component={RegisterScreen}></Route>
+		<Route path="/home" component={HomeScreen}></Route>
+		<Route path="/" component={LoginScreen} exact></Route>
 			
 		</main>
 		{/* footer */}
