@@ -30,9 +30,9 @@ export default function LoginScreen({ location, history }){
   }
 
   return(
-	<div>
-	  <FormContainer>
-	  	<h1>Sign in</h1>
+	<div className='form'>
+	  <FormContainer className='login'>
+	  	<h1 className='login-header'>Sign in</h1>
 		{ error && <Message variant='danger'> {error} </Message> }
 		{ loading && <Loader /> }
 		<Form className='login-form' onSubmit={submitHandler}>
