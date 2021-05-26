@@ -1,11 +1,14 @@
 {
-  "name": "DBMS",
+  "name": "dbms",
   "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon dbms_be/server.js"
+    "start": "node dbms_be/server.js",
+    "server": "nodemon dbms_be/server.js",
+    "client": "npm start --prefix dbms_fe",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -19,7 +22,16 @@
   },
   "homepage": "https://github.com/reniel89/DMBS#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.11",
     "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0"
   }
 }
