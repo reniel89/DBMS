@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import {
   userSigninReducer,
+  userRegisterReducer,
 } from './reducers/userReducers.js';
 
 const initialState = {
@@ -15,6 +16,7 @@ const initialState = {
 
 const reducer = combineReducers({ 
     userSignin: userSigninReducer,
+    userRegister: userRegisterReducer,
 });
 
 const middleware = [thunk];
